@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Humna Ansari Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+	<style>
+
+		/*======================================
+		//--//-->   ABOUT
+		======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+			.about-mf .about-img img {
+				margin-left: 10px;
+			}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+			.skill-mf .progress .progress-bar {
+				height: .7rem;
+				background-color: #ffbd39;
+			}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+			#typing-animation:before {
+				content: "";
+				/* position: absolute; */
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 100%;
+				background-color: #ccc;
+				animation: typing-cursor 0.5s ease-in-out infinite;
+			}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+			.zoom-effect:hover {
+				transform: scale(1.1);
+			}
+	</style>
+
+
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Humna Ansari</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>Skills</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#certification-section" class="nav-link"><span>Certifications</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1_humna.png);border-radius: 50%">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Humna Ansari</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElem = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Senior Software Engineer',
+										'Full Stack Web Developer  ',
+										'Freelancer   ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElem.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElem.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Senior Software Engineer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 8 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<a target="_blank" href="https://www.linkedin.com/in/humna-ansari-02a174130/" class="btn btn-primary py-3 px-4">LinkedIn</a>
+									<a href="#project-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Skills</h1>
+					<h2 class="mb-4">Skills</h2>
+				</div>
+			</div>
+
+			<!-- Core Competencies Section -->
+			<div class="row mb-4">
+				<div class="col-md-3">
+					<h4 class="font-weight-bold">Core Competencies:</h4>
+					<div class="underline"></div>
+				</div>
+				<div class="col-md-9">
+					<div class="row text-center">
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/html5.png" alt="HTML5 Logo" class="img-fluid skill-logo">
+							<p>HTML5</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/css3.png" alt="CSS3 Logo" class="img-fluid skill-logo">
+							<p>CSS3</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/javascript.png" alt="JavaScript Logo" class="img-fluid skill-logo">
+							<p>JavaScript</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/jquery.png" alt="jQuery Logo" class="img-fluid skill-logo">
+							<p>jQuery</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/angularjs.png" alt="Angular Logo" class="img-fluid skill-logo">
+							<p>AngularJS</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/netmvc.png" alt=".NET MVC Logo" class="img-fluid skill-logo">
+							<p>.NET MVC</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/csharp.png" alt="C# Logo" class="img-fluid skill-logo">
+							<p>C#</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/sql.png" alt="SQL Logo" class="img-fluid skill-logo">
+							<p>SQL</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/bootstrap.png" alt="Bootstrap Logo" class="img-fluid skill-logo">
+							<p>Bootstrap</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/kendoui.png" alt="KendoUI Logo" class="img-fluid skill-logo">
+							<p>KendoUI</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/github.png" alt="Github Logo" class="img-fluid skill-logo">
+							<p>Github</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Actively Learning and Exploring Section -->
+			<div class="row">
+				<div class="col-md-3">
+					<h4 class="font-weight-bold">Actively Learning and Exploring:</h4>
+					<div class="underline"></div>
+				</div>
+				<div class="col-md-9">
+					<div class="row text-center">
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/angular.png" alt="Angular Logo" class="img-fluid skill-logo">
+							<p>Angular</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/netcore.png" alt="NETCore Logo" class="img-fluid skill-logo">
+							<p>.NET Core</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/mysql.png" alt="MySQL Logo" class="img-fluid skill-logo">
+							<p>MySQL</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-2 mb-4">
+							<img src="images/azure.png" alt="aws Logo" class="img-fluid skill-logo">
+							<p>AWS</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</section>
+
+
+
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Experienced Software Developer with over 8 years of expertise in building robust and scalable applications using a variety of technologies, including .NET MVC, JavaScript, and Angular. Proficient in designing and implementing innovative solutions to meet business needs. Recently relocated to the UK and currently seeking remote opportunities to leverage my skills and contribute to dynamic projects.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">MAR 2022-MAY 2024</span>
+						<h2>Senior Software Engineer (Remote)</h2>
+						<span class="position">
+							<img src="images/TTR-logo.jpg" alt="aws Logo"
+								 class="img-fluid company-logo">
+							The Tech Resources
+						</span>
+						<p class="mt-4">
+							The Tech Resources is a leading IT firm specializing in software
+							development and digital transformation solutions. It is an IT out-staffing company
+							dedicated to providing clients with highly trained personnel, ensuring optimal project
+							execution and technological excellence.
+							<ul>
+								<li>Developed MVC based applications for different international clients.</li>
+								<li>Communicate effectively with Clients to gather requirements.</li>
+								<li>Assist junior team members in meeting project deadlines.</li>
+								<li>Worked on Asp.NET MVC (C#), Angular 13, JavaScript, Vue.js, JQuery, AngularJS, HTML5, CSS3, SQL.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">JULY 2018–FEB 2022</span>
+						<h2>Software Engineer</h2>
+						<span class="position">
+							<img src="images/ibex-logo.png" alt="aws Logo"
+								 class="img-fluid company-logo">
+							IBEX Global
+						</span>
+						<p class="mt-4">
+							Ibex Global is a leading business process outsourcing (BPO) provider,
+							offering customer support, digital marketing, and back-office services to
+							clients worldwide. The company is known for its focus on innovation and delivering high-quality customer experience solutions.
+							<ul>
+								<li>Developed MVC based applications for call center operations and clients.</li>
+								<li>Managed different projects for international clients including planning, development and deployment.</li>
+								<li>Integrate third-party APIs including Google Drive, Box, Nextcloud, dropbox to in-house applications.</li>
+								<li>Worked on Asp.Net MVC (C#), JavaScript, AJAX, JQuery, AngularJS, HTML5, CSS3, SQL, MYSQL.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">DEC 2015–JUNE 2018</span>
+						<h2>Analyst Software Engineer</h2>
+						<span class="position">
+							<img src="images/ibex-logo.png" alt="aws Logo"
+								 class="img-fluid company-logo">
+							IBEX Global
+						</span>
+						<p class="mt-4">
+							Ibex Global is a leading business process outsourcing (BPO) provider,
+							offering customer support, digital marketing, and back-office services to
+							clients worldwide. The company is known for its focus on innovation and delivering high-quality customer experience solutions.
+							<ul>
+								<li>Handling all aspects of Software Development Life cycle i.e., analyzing the Requirements, Development of Scripts and Reports, Process sanity (QA) at first level and lastly providing support on on-going operations.</li>
+								<li>Deliver all the client related documents on timely and efficient manner.</li>
+								<li>Worked on C++, C#, PHP, JavaScript, AJAX, JQuery, AngularJS, HTML5, CSS3, SQL, MYSQL, SSIS Packages.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2012-2016</span>
+						<h2>Bachelors in Engineering (Software)</h2>
+						<span class="position">NED University of Engineering and Technology - Karachi,PK</span>
+						<p class="mt-4">Graduated with Second Position securing 3.967 GPA.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2010-2011</span>
+						<h2>Higher Secondary Certificate </h2>
+						<span class="position">Sir Syed Govt. Girls College - Karachi,PK</span>
+						<br /><br />
+						<p class="mt-4">Secured A1 Grade with 89.27%.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2008-2009</span>
+						<h2>Secondary School Certificate </h2>
+						<span class="position">Central Point Grammar School</span>
+						<p class="mt-4">Passed with A1 Grade.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://humnaansari.github.io/Portfolio/Humna%20Ansari%20Resume.pdf" download class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are some of the projects I have worked on. While I cannot share the code or screens due to corporate confidentiality, I am happy to discuss my contributions and experience in more detail if you have any questions.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<!-- Trigger Section (Updated Code) -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj1">Recording Management Portal</a>
+							</h3>
+							<p>
+								Developed a central recording tool that allows user to search, play and send call recordings to the client
+								based on PCI standards.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj1" tabindex="-1" role="dialog" aria-labelledby="proj1Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj1Label">Recording Management Portal - IBEX RMP</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Developed a central recording tool that allows user to search, play and send call recordings to the client
+									based on PCI standards.
+								</p>
+								<p>
+									<b>Key Modules Include:</b>
+									<ul>
+										<li>Active Directory Authentication</li>
+										<li>Role Based Authorization</li>
+										<li>Sound Processing - Created a whole audio player that can mask and slice recordings using third party audio utilites.</li>
+										<li>Encryption of Recordings and decryption of data using private keys.</li>
+										<li>Request Processing</li>
+										<li>
+											Sharing of recordings with Cloud Based applications - Integration of Google Drive API, Box API, Nextcloud API, Dropbox API
+										</li>
+										<li>Database management</li>
+									</ul>
+								</p>
+								<p><b>Technologies Used: </b><em>Angular JS, C#, .NET MVC, LINQ, Entity Framework, SQL Server 2012, Windows Services.</em></p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj2">Call Activity Tracker</a>
+							</h3>
+							<p>
+								A system used to help agents with all their call center operations including dispositions, sales tracker,
+								callbacks and report generation.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj2" tabindex="-1" role="dialog" aria-labelledby="proj2Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj2Label">Call Activity Tracker - IBEX Inspire</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									A system used to help agents with all their call center operations including dispositions, sales tracker,
+									callbacks and report generation.
+								</p>
+								<p>
+									<b>Key Modules Include:</b>
+									<ul>
+										<li>Active Directory Authentication</li>
+										<li>Role Based Authorization</li>
+										<li>Tracking of Sales</li>
+										<li>Reports Generation using d3.js</li>
+										<li>Database management and Query Optimizations</li>
+									</ul>
+								</p>
+								<p>
+									<b>Technologies Used: </b><em>
+										C#, Asp.Net MVC, Enterprise Library, HTML, MS SQL Server 2014, JQuery, Kendo UI,
+										Pivottable.js, D3.js.
+									</em>
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj3">PAI Learning Management System</a>
+							</h3>
+							<p>
+								An LMS used to test petroleum and digging engineers before going into the field.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj3" tabindex="-1" role="dialog" aria-labelledby="proj3Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj3Label">PAI Learning Management System - The Tech Resources</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									An LMS used to test petroleum and digging engineers before going into the field.
+								</p>
+								<p>
+									<b>Key Modules Include:</b>
+									<ul>
+										<li>Client Based Permissions</li>
+										<li>Role Based Features</li>
+										<li>Course Content Management</li>
+										<li>Reports Generation</li>
+										<li>Test Modules</li>
+										<li>SCORM Packages</li>
+										<li>Database management and Query Optimizations</li>
+									</ul>
+								</p>
+								<p>
+									<b>Technologies Used: </b><em>
+										C#, .NET MVC, LINQ, Entity Framework, SQL Server 2019, Windows Service.
+									</em>
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+
+			<div class="row d-flex">
+				<!-- Trigger Section (Updated Code) -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj4">Skinner BOL</a>
+							</h3>
+							<p>
+								Worked on a client application that manages shipment and order details and generate Barcodes for the
+								order.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj4" tabindex="-1" role="dialog" aria-labelledby="proj4Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj4Label">Skinner BOL - The Tech Resources</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Worked on a client application that manages shipment and order details and generate Barcodes for the
+									order.
+								</p>
+								<p>
+									<b>Key Modules Include:</b>
+									<ul>
+										<li>Manage Shipments</li>
+										<li>Manage Orders</li>
+										<li>Manage Items</li>
+										<li>Generation of Barcodes.</li>
+									</ul>
+								</p>
+								<p><b>Technologies Used: </b><em>C#, .NET MVC, LINQ, Entity Framework, SQL Server 2019, Vue.js.</em></p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj5">PTC Drugs (Frontend App)</a>
+							</h3>
+							<p>
+								Worked to enhance features of a client application that deals with Pharmaceutical Drugs and Alcohols.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj5" tabindex="-1" role="dialog" aria-labelledby="proj5Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj5Label">PTC Drugs(Frontend App) - The Tech Resources</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Worked to enhance features of a client application that deals with Pharmaceutical Drugs and Alcohols.
+								</p>
+								<p>
+									<b>Key Modules Include:</b>
+									<ul>
+										<li>Role Based Authorization</li>
+										<li>Enrollment Forms</li>
+										<li>Summary of Orders</li>
+										<li>PDF Generation.</li>
+									</ul>
+								</p>
+								<p>
+									<b>Technologies Used: </b><em>
+										Angular 13, Web API, Postman.
+									</em>
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_6.png');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj6">Vonage Sales Application</a>
+							</h3>
+							<p>
+								Developed an application for Vonage Client that helps agents to insert, update and delete their sales
+								records and generate reports based on the records.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj6" tabindex="-1" role="dialog" aria-labelledby="proj6Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj6Label">Vonage Sales Application - IBEX Global</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Developed an application for Vonage Client that helps agents to insert, update and delete their sales
+									records and generate reports based on the records.
+								</p>
+								<p>
+									<b>Key Modules Include:</b>
+									<ul>
+										<li>Insert, Update, Delete Sales Records</li>
+										<li>Reports Generation</li>
+										<li>Database management and Query Optimizations</li>
+									</ul>
+								</p>
+								<p>
+									<b>Technologies Used: </b><em>
+										PHP, XAMPP Server, MySQL, JavaScript, AJAX.
+									</em>
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row d-flex">
+				<!-- Trigger Section (Updated Code) -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj4">Skinner BOL</a>
+							</h3>
+							<p>
+								Worked on a client application that manages shipment and order details and generate Barcodes for the
+								order.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj4" tabindex="-1" role="dialog" aria-labelledby="proj4Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj4Label">Skinner BOL - The Tech Resources</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Worked on a client application that manages shipment and order details and generate Barcodes for the
+									order.
+								</p>
+								<p>
+									<b>Key Modules Include:</b>
+									<ul>
+										<li>Manage Shipments</li>
+										<li>Manage Orders</li>
+										<li>Manage Items</li>
+										<li>Generation of Barcodes.</li>
+									</ul>
+								</p>
+								<p><b>Technologies Used: </b><em>C#, .NET MVC, LINQ, Entity Framework, SQL Server 2019, Vue.js.</em></p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_8.png');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj8">Student Online Academic Portal</a>
+							</h3>
+							<p>
+								Developed Student Online Academic Portal where different schools can create their separate websites.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj8" tabindex="-1" role="dialog" aria-labelledby="proj8Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj8Label">SOAP (Student Online Academic Portal) - Academic Project</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Developed Student Online Academic Portal where different schools can create their separate websites.
+								</p>
+								<p>
+									<b>Key Modules Include:</b>
+									<ul>
+										<li>Schools can create their separate websites</li>
+										<li>
+											Manage all their school activities including course creation, timetable, syllabus and assignments
+											generation
+										</li>
+										<li>Students can connect with activities of different schools, share events and news.</li>
+										<li>Teachers can give badges to students on their performance</li>
+										<li>
+											School can also send SMS notifications to students
+											using the Web Application.
+										</li>
+									</ul>
+								</p>
+								<p>
+									<b>Technologies Used: </b><em>
+										C#, ASP.net Webforms, SQL Server 2008, Ozeki API.
+									</em>
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<!-- Trigger for Modal -->
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_9.png');" data-toggle="modal" data-target="#exampleModal">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">
+								<a href="#" data-toggle="modal" data-target="#proj9">My Fakebook</a>
+							</h3>
+							<p>
+								Developed a social media application with basic functionalities of facebook.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Section -->
+				<div class="modal fade" id="proj9" tabindex="-1" role="dialog" aria-labelledby="proj9Label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="proj9Label">My Fakebook - Academic Project</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Developed a social media application with basic functionalities of facebook.
+								</p>
+
+								<p>
+									<b>Technologies Used: </b><em>
+										Meteor.js, Mongo DB, Spacebar.js.
+									</em>
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- added justify-content-center to center align the last two projects -->
+
+		</div>
+	</section>
+	<section class="ftco-section" id="certification-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Certifications</h1>
+					<h2 class="mb-4">Certifications</h2>
+					<p>Below are the links of some of my certifications in the field of Web Development.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a target="_blank" href="https://app.box.com/s/m40jn2xkg8xn7m43p7j08n9junitzkim"
+						   class="block-20 zoom-effect" style="background-image: url('images/cert_2.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a target="_blank" href="https://app.box.com/s/m40jn2xkg8xn7m43p7j08n9junitzkim">Microsoft Certified Professional</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a target="_blank" href="https://app.box.com/s/6an1cfm9ztuyp6nj7zizomgrx875uru4"
+						   class="block-20 zoom-effect" style="background-image: url('images/cert_1.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a target="_blank" href="https://app.box.com/s/6an1cfm9ztuyp6nj7zizomgrx875uru4">Microsoft Specialist: Programming in HTML5 with Javascript and CSS3</a></h3>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/Z4VTNLN6BQKP" class="block-20 zoom-effect" style="background-image: url('images/cert_3.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/Z4VTNLN6BQKP">Responsive Web Design Professional</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/VFRQXMKSRTC2"
+						   class="block-20 zoom-effect" style="background-image: url('images/cert_4.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/VFRQXMKSRTC2">Responsive Website Basics: Code with HTML, CSS, and JavaScript</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/8TBUEFF49SBW" class="block-20 zoom-effect" style="background-image: url('images/cert_5.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/8TBUEFF49SBW">Introduction to Meteor.js Development</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number">5<sup>th</sup></strong>
+							<span>Position in HSC</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number">2<sup>nd</sup></strong>
+							<span>Position in B.E.</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number">3.967</strong>
+							<span>CGPA</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="500">0</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			-->
+			<!-- <div class="container"> -->
+			<!--<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github  </span> </h2>
+					<div class="heading">
+						<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>-->
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>43 Greenfinch Road, OX11 6BG, Didcot, UK.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+ 44 7384 600 797</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:engr_humnansari@hotmail.com">engr_humnansari@hotmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p>
+							<a href="https://humnaansari.github.io/Portfolio/Humna%20Ansari%20Resume.pdf" download>Download My CV</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question?  </span> <a href="mailto:engr_humnansari@hotmail.com" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on  </li>
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/humna-ansari-02a174130/"><span class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.facebook.com/humna.ansari.3"><span class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.instagram.com/humnansari/"><span class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+</html>
